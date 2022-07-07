@@ -9,6 +9,7 @@ class cuenta_bancaria:
             self.fondos=fondos
         else:
             self.fondos=0
+        self.operaciones=[]
 
 
     def imprimir(self):
@@ -37,3 +38,12 @@ class cuenta_bancaria:
             cuenta.fondos=cuenta.fondos+cantidad
             self.fondos=self.fondos-cantidad
             print(f'has transferido {cantidad} a {cuenta.titular}')
+    def operaciones(self):
+        ingresos=[]
+        retiros=[]
+        for i in self.operaciones:
+            if i>=0:
+                ingresos.append(i)
+            else:
+                retiros.append(i)
+        return f'Ingresos: {ingresos}\nRetiros: {retiros}'
