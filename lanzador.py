@@ -1,6 +1,7 @@
+
 import random
+from cuenta import cuenta_bancaria
 def main():
-    print('hola')
     #Ejercicio1:
     x=random.randint(10,20)
     y=random.randint(1,200)
@@ -18,7 +19,24 @@ def main():
         else:
             print(f'Son {z} euros')
 
-    #Ejercicio5:
-    
+    #Ejercicio2
+    while r!=3:
+        r=int(input(f'¿Desea realizar alguna operacion?:\n 1- Ingresar.\n 2- Retirar.\n 3- Salir'))
+        cuenta1=cuenta_bancaria("javi",1000)
+        if r==1:
+            n=float(input('¿Que cantidad deseas ingresar?:\n'))
+            cuenta1.ingresar(n)
+            cuenta1.operaciones.append(n)
+            cuenta1.imprimir()
+        elif r==2:
+            m=float(input('¿Que cantidad deseas retirar?:\n'))
+            cuenta1.retirar(m)
+            cuenta1.operaciones.append(-m)
+            cuenta1.imprimir()
+        else:
+            print('Opcion incorrecta')
+    else:
+        cuenta1.imprimir
+        print(cuenta1.operaciones)
 
 
