@@ -5,10 +5,8 @@ class cuenta_bancaria:
             self.titular=titular
         else:
             self.titular="nombre"
-        if isinstance(fondos,float):
-            self.fondos=fondos
-        else:
-            self.fondos=0
+        self.fondos=fondos
+
         self.operaciones=[]
 
 
@@ -38,7 +36,7 @@ class cuenta_bancaria:
             cuenta.fondos=cuenta.fondos+cantidad
             self.fondos=self.fondos-cantidad
             print(f'has transferido {cantidad} a {cuenta.titular}')
-    def operaciones(self):
+    def div_operaciones(self):
         ingresos=[]
         retiros=[]
         for i in self.operaciones:
@@ -46,4 +44,4 @@ class cuenta_bancaria:
                 ingresos.append(i)
             else:
                 retiros.append(i)
-        return f'Ingresos: {ingresos}\nRetiros: {retiros}'
+        print(f'Ingresos: {ingresos}\nRetiros: {retiros}')

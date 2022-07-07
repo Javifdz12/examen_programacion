@@ -19,7 +19,7 @@ def main():
         else:
             print(f'Son {z} euros')
 
-    #Ejercicio2
+    #Ejercicio5:
     while r!=3:
         r=int(input(f'¿Desea realizar alguna operacion?:\n 1- Ingresar.\n 2- Retirar.\n 3- Salir'))
         cuenta1=cuenta_bancaria("javi",1000)
@@ -38,5 +38,8 @@ def main():
     else:
         cuenta1.imprimir
         print(cuenta1.operaciones)
+
+    #
+
 
 
