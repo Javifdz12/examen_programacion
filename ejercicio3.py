@@ -18,5 +18,5 @@ def staking(capital,interes_anual,años):
     ingreso_anual=(capital*interes_anual)/100
     print(f'Cada año vas a generar {ingreso_anual} euros, por tanto en {años} años habras generado {ingreso_anual*años} euros, por lo que terminaras con {(ingreso_anual*años)+capital} euros de capital')
 
-
+peligro()
 staking(DollarToEuros(4),5,5)
